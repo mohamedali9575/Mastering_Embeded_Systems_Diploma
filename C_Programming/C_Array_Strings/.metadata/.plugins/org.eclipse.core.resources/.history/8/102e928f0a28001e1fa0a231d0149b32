@@ -1,0 +1,21 @@
+/*
+ * EX3.c
+ *
+ *  Created on: ???/???/????
+ *      Author: moham
+ */
+
+
+#include<stdio.h>
+
+void main(){
+	char word[200];
+	printf("Enter the string: ");
+	fflush(stdin); fflush(stdout);
+	gets(word);
+	int n =strlen(word);
+	printf("Reverse string is: ");
+	for(int i = n ;i>=0;i--){
+		print("%c",word[i]);
+	}
+}

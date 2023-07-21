@@ -1,0 +1,36 @@
+/*
+ * EX4.c
+ *
+ *  Created on: 21 Jul 2023
+ *      Author: moham
+ */
+
+
+#include<stdio.h>
+
+void main(){
+	int num_elem, number, location, matrix[200];
+	printf("Enter number of elements: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%d",&num_elem);
+	for(int r=0;r<num_elem;r++){
+		scanf("%d",matrix[r]);
+	}
+
+	printf("Enter the element to be inserted: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%d",&number);
+	printf("Enter the location: ");
+	fflush(stdin); fflush(stdout);
+	scanf("%d",&location);
+
+	for(int i=num_elem;i>=location;i--){
+		matrix[i]=matrix[i-1];
+	}
+	matrix[location-1]=number;
+	for(int i=0;i<=num_elem;i++){
+		printf("%d ",matrix[i]);
+	}
+
+
+}

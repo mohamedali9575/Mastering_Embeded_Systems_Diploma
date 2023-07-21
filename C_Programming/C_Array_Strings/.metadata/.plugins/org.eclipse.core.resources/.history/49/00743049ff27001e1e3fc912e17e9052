@@ -1,0 +1,42 @@
+/*
+ * EX3.c
+ *
+ *  Created on: 21 Jul 2023
+ *      Author: moham
+ */
+
+#include<stdio.h>
+
+void main(){
+	float matrix[200][200];
+	int num_c,num_r;
+	printf("Enter rows and column of matrix: ");
+	fflush(stdin);  fflush(stdout);
+	scanf("%d %d",&num_r,&num_c);
+	printf("Enter elements of matrix: \n");
+	for(int c=0;c<num_r;c++)
+	{
+		for(int r = 0; r < num_c; r++){
+			printf("Enter Elements a %d%d",c+1,r+1);
+			fflush(stdin); fflush(stdout);
+			scanf("%f",&matrix[c][r]);
+		}
+	}
+	printf("Your matrix is:- \n");
+	for(int c=0;c<num_r;c++)
+		{
+			for(int r = 0; r < num_c; r++){
+				printf("%.2f	",matrix[c][r]);
+			}
+			printf("\n");
+		}
+	printf("The transposed matrix is:-\n");
+	for(int c=0;c<num_r;c++)
+		{
+			for(int r = 0; r < num_c; r++){
+				printf("%.2f	",matrix[c][r]);
+			}
+			printf("\n");
+		}
+
+}
